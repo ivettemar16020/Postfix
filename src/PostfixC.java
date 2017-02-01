@@ -6,12 +6,12 @@ import java.io.IOException;
  * @author chavez
  *
  */
-public class PostfixC {
+public class PostfixC  {
 
 	/**
 	 * @param args
 	 */
-	public static void main(String[] args) {
+	public static void main(String[] args) throws FileNotFoundException, IOException{
 		
 		iPila<Integer> miPila = new PilaArray<Integer>();
 		iCalculadora miCalculadora = new Calcu();
@@ -23,6 +23,7 @@ public class PostfixC {
 		 	
 		 	FileReader fr = new FileReader("datos.txt");
 		 	BufferedReader bf = new BufferedReader(fr);
+		 	System.out.println("hi");
 	        while((cadena = Integer.toString(bf.read()))!=null) {
 	            if (contador != 2) {
 	            	miPila.push(Integer.parseInt(cadena));
@@ -57,9 +58,11 @@ public class PostfixC {
 	            		miPila.push(resultado);
 	            		contador = 1;
 	            	}
-	            }
+	            } 
 	        }
-	        b.close();	
+	        bf.close();	 
+	        int fin = miPila.pop();
+	        System.out.println(fin);
 	}
 
 }
