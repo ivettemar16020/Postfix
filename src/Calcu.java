@@ -74,42 +74,43 @@ public class Calcu implements iCalculadora {
 	 */
 	public double operar(String n){
 		conta = 2;
-		contador = n.length();
+		contador = n.length(); //El contador sera del tamaño del string que se obtuvo del archivo
 		miPila.push(Double.parseDouble(n.substring(0,1))); //Saca el elemento segun el indice
+		//Se crea un for para que se realicen las operaciones hasta que la cadena se termine
 		for (int i = 1; i <= (contador-1); i++ ){
 			miPila.push(Double.parseDouble(n.substring(i,conta))); 
-    		i++;
-    		conta++;
+    		i++; //Se le suma 1 al contador
+    		conta++; //Se le suma 1 al contador
     		operador = n.substring(i, conta);
-    		if (operador.equals("+")){
-    			c = miPila.pop();
-        		a = miPila.pop();
-        		resultado = suma(a,c);
-        		miPila.push(resultado);
-        		conta++;
+    		if (operador.equals("+")){ //revisa el operador
+    			c = miPila.pop(); //Saca el elemento de la cadena
+        		a = miPila.pop(); //Saca el elemento de la cadena
+        		resultado = suma(a,c); //Efectua la operacion y la guarda en resultado
+        		miPila.push(resultado); //Sube el resultado a la pila
+        		conta++;//Se le suma 1 al contador
         	}
-    		else if (operador.equals("-")){
-        		c = miPila.pop();
-        		a = miPila.pop();
-        		resultado = resta(a,c);
-        		miPila.push(resultado);
-        		conta++;
+    		else if (operador.equals("-")){ //revisa el operador
+        		c = miPila.pop();//Saca el elemento de la cadena
+        		a = miPila.pop();//Saca el elemento de la cadena
+        		resultado = resta(a,c);//Efectua la operacion y la guarda en resultado
+        		miPila.push(resultado);//Sube el resultado a la pila
+        		conta++;//Se le suma 1 al contador
         	}
-        	if (operador.equals("*")){
-        		c = miPila.pop();
-        		a = miPila.pop();
-        		resultado = multiplicacion(a,c);
-        		miPila.push(resultado);
-        		conta++;
+        	if (operador.equals("*")){ //revisa el operador
+        		c = miPila.pop();//Saca el elemento de la cadena
+        		a = miPila.pop();//Saca el elemento de la cadena
+        		resultado = multiplicacion(a,c);//Efectua la operacion y la guarda en resultado
+        		miPila.push(resultado);//Sube el resultado a la pila
+        		conta++;//Se le suma 1 al contador
           	}
-        	if (operador.equals("/")){
-        		c = miPila.pop();
-        		a = miPila.pop();
-        		resultado = division(a,c);
-        		miPila.push(resultado);
-        		conta++;
+        	if (operador.equals("/")){ //revisa el operador
+        		c = miPila.pop();//Saca el elemento de la cadena
+        		a = miPila.pop();//Saca el elemento de la cadena
+        		resultado = division(a,c);//Efectua la operacion y la guarda en resultado
+        		miPila.push(resultado);//Sube el resultado a la pila
+        		conta++;//Se le suma 1 al contador
         	}       
 	}
-		return resultado;
+		return resultado; //Devuelve el resultado 
 	}
 }

@@ -26,6 +26,7 @@ public class PostfixC  {
 	        cadena = (bf.readLine());
 	        System.out.println("El resultado es: " + miCalculadora.operar(cadena));
 	        System.out.println("Gracias querido auxiliar <3");
+	        System.out.println("Espero te gusten los comentarios");
 
 	}
 }
