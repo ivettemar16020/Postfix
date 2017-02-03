@@ -1,11 +1,19 @@
 import java.util.ArrayList;
 import java.util.Vector;
 
+/**
+ * @author Yasmin Chavez 16101
+ * @author Ivette Cardona 16020
+ * Descripcion: clase que implementa de pila, ademas esta utiliza vectores para realizar el stack
+ * Objetivo: utilizar la clase vector de java
+ */
 
 public class PilaVector<E>implements iPila<E>{
 	
+	//Instanciar el vector
 	protected Vector<E> lista;
 	
+	//Constructores
 	public PilaVector(){
 		lista = new Vector(10,5);
 		lista = new Vector(10);
@@ -15,15 +23,15 @@ public class PilaVector<E>implements iPila<E>{
 
 	public void push(E algo){
 		// pre:  
-		// post: se añade un elemento al stack
+		// post: se aï¿½ade un elemento al stack
 		lista.addElement(algo);	
 		
 	}
 	
 	public E pop(){
 		//pre: el stack no este vacio
-		//post: retira el ultimo elemento añadido
-		return lista.remove((lista.size()));
+		//post: retira el ultimo elemento aï¿½adido
+		return lista.remove((lista.size()-1));
 	}
 	
 	public boolean isEmpty(){

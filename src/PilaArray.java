@@ -1,5 +1,10 @@
 import java.util.ArrayList;
-
+/**
+ * @author Yasmin Chavez 16101
+ * @author Ivette Cardona 16020
+ * Descripcion: clase que implementa de la interfaz pila
+ * Objetivo: utilizar arraylists para la elaboracion de esta clase
+ */
 public class PilaArray<E>implements iPila<E>{
 	
 	//instanciar objetos
@@ -12,14 +17,14 @@ public class PilaArray<E>implements iPila<E>{
 	
 	public void push(E algo){
 		// pre:  
-		// post: se añade un elemento al stack
+		// post: se agrega un elemento al stack
 		lista.add(algo);	
 		
 	}
 	
 	public E pop(){
 		//pre: el stack no este vacio
-		//post: retira el ultimo elemento añadido
+		//post: retira el ultimo elemento agregado
 		return lista.remove(lista.size()-1);
 		
 	}

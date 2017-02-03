@@ -1,12 +1,48 @@
+import java.util.ArrayList;
+import java.util.Vector;
 
+/**
+ * @author Yasmin Chavez 16101
+ * @author Ivette Cardona 16020
+ * Descripcion: interfaz de la calculadora, establece el contrato para realizarla
+ * Objetivo: establecer que metodos son necesarion para la realizacion de la clase 
+ */
 public interface iCalculadora {
 
-	public int suma(int a, int b);
+	/**
+	 * @param a
+	 * @param b
+	 * @return la suma de a y b
+	 */
+	public double suma(double a, double b);
 	
-	public int resta(int a, int b);
 	
-	public int multiplicacion(int a, int b);
+	/**
+	 * @param a
+	 * @param b
+	 * @return la resta de a y b 
+	 */
+	public double resta(double a, double b);
 	
-	public int division(int a, int b);
+	/**
+	 * @param a
+	 * @param b
+	 * @return la multiplicacion de a por b
+	 */
+	public double multiplicacion(double a, double b);
+	
+	/**
+	 * @param a
+	 * @param b
+	 * @return la division de a entre b
+	 */
+	public double division(double a, double b);
+	
+	/**
+	 * @param cadena
+	 * @return resultado
+	 */
+	public double operar(String n);
+	
 	
 }
