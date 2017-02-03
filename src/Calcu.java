@@ -11,6 +11,9 @@ import javax.swing.JOptionPane;
  */
 public class Calcu implements iCalculadora {
 	
+	//Instanciar los objetos que se van a utilizar
+	//Quitar el comentario dependiendo de si desea utilizar un arraylist o un vector
+	
 	//iPila<Double> miPila = new PilaArray<Double>();
 	iPila<Double> miPila = new PilaVector<Double>();
 	double resultado; 
