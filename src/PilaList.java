@@ -1,3 +1,4 @@
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -8,28 +9,28 @@ import java.util.List;
  * Objetivo: utilizar listas para la elaboracion de esta clase
  */
 
-public class PilaList<E>implements iPila<E> {
+public class PilaList<E> extends AbstractPila<E> {
+	
+	private FactoryList<E> factoryList = new FactoryList<E>();
 	
 	//Instanciar objetos
-	private LinkedList<E> myList;
+	private AbstractList<E> myList;
 
 	//Constructor
-	public PilaList(){
-		myList = new LinkedList<E>();
+	public PilaList(String tipo){
+		myList = factoryList.getLista(tipo);
 	}
 	
-	@Override
 	public void push(E algo) {
 		// pre:  
 		// post: se agrega un elemento al stack
 		myList.add(algo);	
 	}
 
-	@Override
 	public E pop() {
 		//pre: el stack no este vacio
 		//post: retira el ultimo elemento agregado
-		return myList.remove(myList.size()-1);
+		return (E) myList.remove(myList.size()-1);
 	}
 
 	@Override

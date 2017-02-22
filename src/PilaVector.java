@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.Vector;
 
 /**
@@ -8,7 +9,7 @@ import java.util.Vector;
  * Objetivo: utilizar la clase vector de java
  */
 
-public class PilaVector<E>implements iPila<E>{
+public class PilaVector<E> extends AbstractPila<E> {
 	
 	//Instanciar el vector
 	protected Vector<E> lista;
@@ -41,7 +42,6 @@ public class PilaVector<E>implements iPila<E>{
 		
 	}
 
-
-	
+		
 }
 

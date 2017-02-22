@@ -30,4 +30,19 @@ public class NodoDoblementeEncadenada<E> {
 	{
 	    this(v,null,null);
 	}
+
+	public NodoDoblementeEncadenada<E> previous() {
+		// TODO Auto-generated method stub
+		return previousElement;
+	}
+
+	public void setNext(NodoDoblementeEncadenada<E> object) {
+		// TODO Auto-generated method stub
+		this.nextElement = object;
+	}
+
+	public E value() {
+		// TODO Auto-generated method stub
+		return data;
+	}
 }

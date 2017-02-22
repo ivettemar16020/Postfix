@@ -1,11 +1,12 @@
 import java.util.ArrayList;
+import java.util.Iterator;
 /**
  * @author Yasmin Chavez 16101
  * @author Ivette Cardona 16020
  * Descripcion: clase que implementa de la interfaz pila
  * Objetivo: utilizar arraylists para la elaboracion de esta clase
  */
-public class PilaArray<E>implements iPila<E>{
+public class PilaArray<E> extends AbstractPila<E>{
 	
 	//instanciar objetos
 	protected ArrayList<E> lista;
@@ -35,5 +36,4 @@ public class PilaArray<E>implements iPila<E>{
 		return lista.size() == 0;
 		
 	}
-
 }
