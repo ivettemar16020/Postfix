@@ -34,10 +34,10 @@ public class PostfixC  {
 		 
 		 
 		 //Utilizacion de buffered Reader para obtener los datos de un archivo de texto
-		 	//FileReader fr = new FileReader("datos.txt");
-		 	//BufferedReader bf = new BufferedReader(fr);
-	       // cadena = (bf.readLine());
-	        System.out.println("El resultado es: " + miCalculadora.operar("12+4*3+"));
+		 	FileReader fr = new FileReader("datos.txt");
+		 	BufferedReader bf = new BufferedReader(fr);
+	        cadena = (bf.readLine());
+	        System.out.println("El resultado es: " + miCalculadora.operar(cadena));
 
 	}
 }
