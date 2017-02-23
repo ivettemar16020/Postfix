@@ -35,7 +35,7 @@ public class SimplementeEncadenadas<E> extends AbstractList<E> {
 	     count++;
 	  }
 	  
-	  public E removeFirst()
+	  public E pop()
 	  // pre: list is not empty
 	  // post: removes and returns value from beginning of list
 	 {
@@ -52,7 +52,7 @@ public class SimplementeEncadenadas<E> extends AbstractList<E> {
 	      return head.value();
 	  }
 	  
-	  public void addLast(E value)
+	  public void push(E value)
 	  // post: adds value to end of list
 	  {
 	      // location for new value
@@ -100,7 +100,7 @@ public class SimplementeEncadenadas<E> extends AbstractList<E> {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	/*
 	@Override
 	public E pop() {
 		String valor = "";
@@ -118,6 +118,7 @@ public class SimplementeEncadenadas<E> extends AbstractList<E> {
 		}
 		return (E)valor;
 	}
+	*/
 
 	@Override
 	public E remove(E value) {
@@ -181,6 +182,12 @@ public class SimplementeEncadenadas<E> extends AbstractList<E> {
 
 	@Override
 	public Iterator<E> iterator() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public E removeFirst() {
 		// TODO Auto-generated method stub
 		return null;
 	}

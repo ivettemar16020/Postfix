@@ -15,7 +15,7 @@ public class Calcu implements iCalculadora {
 	//Quitar el comentario dependiendo de si desea utilizar un arraylist o un vector
 	
 	AbstractPila<Double> miPila;
- 	FactoryPila<Double> factoryPila = new FactoryPila<Double>();
+ 	FactoryPila factoryPila = new FactoryPila<Double>();
 	double resultado; 
 	int contador;
 	String operador;

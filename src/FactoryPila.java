@@ -7,10 +7,10 @@
  *
  */
 public class FactoryPila<E> {
-	public Object getPila(String tipo) {
+	public AbstractPila<E> getPila(String tipo) {
 		return getPila(tipo, "");
 	}
-	public Object getPila(String tipo, String tipoLista) {
+	public AbstractPila<E> getPila(String tipo, String tipoLista) {
 		if (tipo.equals("ArrayList")) {
 			return new PilaArray<E>();
 		}else if (tipo.equals("Vector")) {

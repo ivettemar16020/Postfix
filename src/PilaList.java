@@ -24,13 +24,13 @@ public class PilaList<E> extends AbstractPila<E> {
 	public void push(E algo) {
 		// pre:  
 		// post: se agrega un elemento al stack
-		myList.add(algo);	
+		myList.push(algo);	
 	}
 
 	public E pop() {
 		//pre: el stack no este vacio
 		//post: retira el ultimo elemento agregado
-		return (E) myList.remove(myList.size()-1);
+		return (E) myList.pop();
 	}
 
 	@Override

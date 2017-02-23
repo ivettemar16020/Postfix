@@ -85,7 +85,7 @@ public class ListaCircular<E> extends AbstractList<E> {
 	@Override
 	public E getFirst() {
 		// TODO Auto-generated method stub
-		return null;
+		return tail.next().value();
 	}
 
 	@Override

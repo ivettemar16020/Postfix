@@ -35,7 +35,7 @@ public class DoblementeEncadenada<E> extends AbstractList<E>{
 	}
 
 
-	public void addLast(E value)
+	public void push(E value)
 	// pre: value is not null
 	// post: adds new value to tail of list
 	{
@@ -47,7 +47,7 @@ public class DoblementeEncadenada<E> extends AbstractList<E>{
 	}
 
 
-	public E removeLast()
+	public E pop()
 	// pre: list is not empty
 	// post: removes value from tail of list
 	{
@@ -80,7 +80,7 @@ public class DoblementeEncadenada<E> extends AbstractList<E>{
 	@Override
 	public E getFirst() {
 		// TODO Auto-generated method stub
-		return null;
+		return head.value();
 	}
 
 
