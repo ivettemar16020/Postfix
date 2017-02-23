@@ -14,8 +14,8 @@ public class Calcu implements iCalculadora {
 	//Instanciar los objetos que se van a utilizar
 	//Quitar el comentario dependiendo de si desea utilizar un arraylist o un vector
 	
-	Object miPila;
-	Object  factory = new FactoryPila<Double>();
+	AbstractPila<Double> miPila;
+ 	FactoryPila<Double> factoryPila = new FactoryPila<Double>();
 	double resultado; 
 	int contador;
 	String operador;
@@ -25,13 +25,12 @@ public class Calcu implements iCalculadora {
 	int conta;
 	
 	public void setPila(String tipoPila) {
-		miPila = (AbstractPila<Double>) ((FactoryPila<Double>) factory).getPila(tipoPila);
-	}
-	
+		 		miPila = factoryPila.getPila(tipoPila);
+		 	}
+		 	
 	public void setPila(String tipoPila, String tipoLista) {
-		factory = new FactoryList<Double>();
-		miPila = (AbstractList<Double>) ((FactoryList<Double>)factory).getLista(tipoLista);
-	}
+		 		miPila = factoryPila.getPila(tipoPila, tipoLista);
+		 	}
 	
 	/**
 	 * @param a

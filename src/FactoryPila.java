@@ -16,7 +16,7 @@ public class FactoryPila<E> {
 		}else if (tipo.equals("Vector")) {
 			return new PilaVector<E>();
 		}else if (tipo.equals("PilaLista")) {
-			return new FactoryList<E>().getLista(tipoLista);
+			return new PilaList<E>(tipoLista);
 		}else {
 			return null;
 		}
