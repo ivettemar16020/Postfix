@@ -10,7 +10,7 @@ import java.util.Iterator;
  */
 public interface iList<E> {
 	
-	public int size();
+	   public int size();
 	   // post: returns number of elements in list
 
 	   public boolean isEmpty();
@@ -22,7 +22,7 @@ public interface iList<E> {
 	   public void addFirst(E value);
 	   // post: value is added to beginning of list
 
-	   public void addLast(E value);
+	   public void push(E value);
 	   // post: value is added to end of list
 
 	   public E getFirst();
@@ -37,7 +37,7 @@ public interface iList<E> {
 	   // pre: list is not empty
 	   // post: removes first value from list
 
-	   public E removeLast();
+	   public E pop();
 	   // pre: list is not empty
 	   // post: removes last value from list
 

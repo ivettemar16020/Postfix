@@ -174,4 +174,11 @@ public class DoblementeEncadenada<E> extends AbstractList<E>{
 		return null;
 	}
 
+
+	@Override
+	public boolean contains(E value) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }

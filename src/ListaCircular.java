@@ -37,7 +37,7 @@ public class ListaCircular<E> extends AbstractList<E> {
 	}
 
 
-	public void addLast(E value)
+	public void push(E value)
 	// pre: value non-null
 	// post: adds element to tail of list
 	{
@@ -49,7 +49,7 @@ public class ListaCircular<E> extends AbstractList<E> {
 
 	// lo dificil es quitar el elemento de la cola
 
-	public E removeLast()
+	public E pop()
 	// pre: !isEmpty()
 	// post: returns and removes value from tail of list
 	{
@@ -164,6 +164,12 @@ public class ListaCircular<E> extends AbstractList<E> {
 	public Iterator<E> iterator() {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public boolean contains(E value) {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
