@@ -17,6 +17,7 @@ public class PostfixC  {
 	 * @param args
 	 */
 	public static void main(String[] args) throws IOException{ //FileNotFoundException, 
+		ClassicSingleton st = ClassicSingleton.getInstance();
 		Scanner sc = new Scanner(System.in); 
 		//Instanciar objetos a utilizar
 		 Calcu miCalculadora = new Calcu();

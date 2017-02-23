@@ -102,9 +102,21 @@ public class SimplementeEncadenadas<E> extends AbstractList<E> {
 	}
 
 	@Override
-	public E removeLast() {
-		// TODO Auto-generated method stub
-		return null;
+	public E pop() {
+		String valor = "";
+		int count=0;
+		Nodo<E> finger = head;
+		Nodo<E> penultimo = head;
+		if (finger != null){
+			while (finger.next() != null){
+				finger = finger.next();
+				count++;
+			}
+			for (int i=0; i < count; i++){
+				penultimo.next();
+			}
+		}
+		return (E)valor;
 	}
 
 	@Override
