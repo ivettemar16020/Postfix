@@ -39,10 +39,10 @@ public class SimplementeEncadenadas<E> extends AbstractList<E> {
 	  // pre: list is not empty
 	  // post: removes and returns value from beginning of list
 	 {
-	     Nodo<E> temp = head;
-	     head = head.next(); // move head down list
-	     count--;
-	     return temp.value();
+		  	 Nodo<E> temp = head;
+		     head = head.next(); // move head down list
+		     count--;
+		     return temp.value();
 	  }
 	  
 	  public E getFirst()
@@ -56,20 +56,21 @@ public class SimplementeEncadenadas<E> extends AbstractList<E> {
 	  // post: adds value to end of list
 	  {
 	      // location for new value
-	      Nodo<E> temp = new Nodo<E>(value,null);
-	      if (head != null)
-	     {
-	         // pointer to possible tail
-	         Nodo<E> finger = head;
-	         while (finger.next() != null)
-	         {
-	                finger = finger.next();
-	         }
-			 
-	         finger.setNext(temp);
-	      } else head = temp;
-		  
-		  count++;
+		   Nodo<E> temp = new Nodo<E>(value,null);
+		      if (head != null)
+		     {
+		         // pointer to possible tail
+		         Nodo<E> finger = head;
+		         while (finger.next() != null)
+		         {
+		                finger = finger.next();
+		         }
+				 
+		         finger.setNext(temp);
+		      } else head = temp;
+			  
+			  count++;
+			  
 		  
 	   }
 	   
